@@ -1063,7 +1063,6 @@ function CTA() {
   );
 }
 
-// Footer
 function Footer({ setPage }) {
   return (
     <footer style={{
@@ -1103,7 +1102,7 @@ function Footer({ setPage }) {
           </div>
         </div>
 
-        <div style={{ display: "flex", gap: "2rem", flexWrap: "wrap" }}>
+        <div style={{ display: "flex", gap: "2rem", flexWrap: "wrap", alignItems: "center" }}>
           {[
             { label: "Inicio", action: () => setPage("home") },
             { label: "Portfolio", action: () => setPage("portfolio") },
@@ -1128,6 +1127,33 @@ function Footer({ setPage }) {
               {item.label}
             </button>
           ))}
+
+          
+           <a href="https://instagram.com/aragon_ls"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              textDecoration: "none",
+              color: TEXT_MUTED,
+              fontFamily: "'Montserrat', sans-serif",
+              fontSize: "0.65rem",
+              letterSpacing: "0.15em",
+              textTransform: "uppercase",
+              transition: "color 0.2s",
+            }}
+            onMouseEnter={e => { e.currentTarget.style.color = GOLD; }}
+            onMouseLeave={e => { e.currentTarget.style.color = TEXT_MUTED; }}
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <rect x="2" y="2" width="20" height="20" rx="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+            </svg>
+            Instagram
+          </a>
         </div>
 
         <div style={{
