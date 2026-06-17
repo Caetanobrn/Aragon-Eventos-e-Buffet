@@ -1146,6 +1146,7 @@ function Footer({ setPage }) {
 // Portfolio Page
 function PortfolioPage() {
   const [filter, setFilter] = useState("Todos");
+  const [selected, setSelected] = useState(null);
   const categories = ["Todos", "Arranjos de Balões", "Buffet", "Buffet & Decoração"];
 
   const filtered = filter === "Todos"
@@ -1156,6 +1157,7 @@ function PortfolioPage() {
 
   return (
     <div style={{ background: BLACK, minHeight: "100vh", paddingTop: "8rem" }}>
+      <Lightbox project={selected} onClose={() => setSelected(null)} />
       {/* Header */}
       <div style={{
         textAlign: "center",
@@ -1261,11 +1263,12 @@ function PortfolioPage() {
           {filtered.map((project) => (
             <div
               key={project.id}
+              onClick={() => project.image && setSelected(project)}
               style={{
                 height: "300px",
                 position: "relative",
                 overflow: "hidden",
-                cursor: "pointer",
+                cursor: project.image ? "pointer" : "default",
                 background: DARK_GRAY,
               }}
               onMouseEnter={e => {
