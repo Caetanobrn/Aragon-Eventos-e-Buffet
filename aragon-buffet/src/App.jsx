@@ -69,11 +69,11 @@ const galleryProjects = [
   },
   {
     id: 8,
-    title: "Doces Premium",
+    title: "Caldos",
     category: "Buffet",
-    description: "Seleção de doces premium com acabamento refinado e ingredientes de qualidade",
+    description: "Caldos saborosos com ingredientes de qualidade",
     aspect: "tall",
-    image: "/fotos-buffet/doces.jpeg",
+    image: "/fotos-buffet/caldos.jpeg",
   },
 ];
 
@@ -303,27 +303,18 @@ function Nav({ currentPage, setPage }) {
         cursor: "pointer",
         padding: 0,
       }}>
-        <div style={{
-          fontFamily: "'Cormorant Garamond', serif",
-          fontSize: "1.6rem",
-          fontWeight: 300,
-          letterSpacing: "0.25em",
-          color: "white",
-          textTransform: "uppercase",
-        }}>
-          ARAGÓN
-        </div>
-        <div style={{
-          fontSize: "0.55rem",
-          letterSpacing: "0.4em",
-          color: GOLD,
-          textTransform: "uppercase",
-          fontFamily: "'Montserrat', sans-serif",
-          fontWeight: 400,
-          marginTop: "-2px",
-        }}>
-          Eventos & Buffet
-        </div>
+        <button onClick={() => setPage("home")} style={{
+  background: "none",
+  border: "none",
+  cursor: "pointer",
+  padding: 0,
+}}>
+  <img
+    src="/logo.png"
+    alt="Aragón Buffet & Ornamentação"
+    style={{ height: "70px", width: "auto" }}
+  />
+</button>
       </button>
 
       <div style={{ display: "flex", gap: "2.5rem", alignItems: "center" }}>
@@ -455,7 +446,7 @@ function Hero({ setPage }) {
           gap: "1rem",
         }}>
           <span style={{ width: "40px", height: "1px", background: GOLD, display: "inline-block" }} />
-          Arranjos de Balões & Buffet
+          Buffet & Ornamentação
           <span style={{ width: "40px", height: "1px", background: GOLD, display: "inline-block" }} />
         </div>
 
@@ -1098,7 +1089,7 @@ function Footer({ setPage }) {
             textTransform: "uppercase",
             marginTop: "0.2rem",
           }}>
-            Eventos & Buffet
+            Buffet & Ornamentação
           </div>
         </div>
 
